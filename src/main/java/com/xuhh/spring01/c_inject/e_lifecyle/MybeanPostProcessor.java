@@ -17,13 +17,13 @@ public class MybeanPostProcessor  implements BeanPostProcessor {
 
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-		System.out.println("前方法" + beanName);
+		System.out.println("前方法    " + beanName);
 		return bean;
 	}
 
 	@Override
 	public Object postProcessAfterInitialization( final Object bean, String beanName) throws BeansException {
-		System.out.println("后方法" + beanName);
+		System.out.println("后方法    " + beanName);
 		return Proxy.newProxyInstance(MybeanPostProcessor.class.getClassLoader(), bean.getClass().getInterfaces(),
 				new InvocationHandler() {
 					@Override
