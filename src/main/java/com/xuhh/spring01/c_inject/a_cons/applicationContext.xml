@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!-- 构造注入
+       * <constructor-arg> 用于配置构造一个参数argument
+              name：参数的名称
+              value：设置普通数据
+              ref：引用数据，一般是另一个bena id值
+       例如1：使用名称
+               <constructor-arg name="name" value="jack"></constructor-arg>
+                <constructor-arg name="age" value="18"></constructor-arg>
+                但是开发中用的很少，直接用名称的话，如果不关联源码，是不知道它
+                的名字的
+             使用index
+                       index：参数索引号，从0开始。如果只有索引，匹配到了多个构造
+                       方法，默认使用第一个构造方法，为了解决这个问题，所以我们
+                       添加了type属性来解决该冲突
+                       type
+        例如2：使用index和type
+                <constructor-arg index="0"  type="java.lang.String" value="1"></constructor-arg>
+                <constructor-arg  index="1" type="java.lang.Integer" value="2"></constructor-arg>
+        -->
+        <bean id="user" class="com.xuhh.spring01.c_inject.a_cons.User">
+                <constructor-arg index="0"  type="java.lang.Integer" value="1"></constructor-arg>
+                <constructor-arg  index="1" type="java.lang.String" value="2"></constructor-arg>
+        </bean>
+</beans>
