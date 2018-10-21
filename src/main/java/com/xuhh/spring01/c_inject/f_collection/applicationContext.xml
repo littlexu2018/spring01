@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!--
+          集合的注入其实就是给<propety>添加子标签
+             数组：
+             List:
+             Set:
+             Map:
+             Properties:<props>
+
+         普通数据：<value>
+         引用数据：<ref>
+        -->
+
+        <bean id="collDate" class="com.xuhh.spring01.c_inject.f_collection.CollDate">
+                <property name="arrDate">
+                        <array>
+                                <value>DS</value>
+                                <value>DZD</value>
+                                <value>屌丝</value>
+                                <value>吊中吊</value>
+                        </array>
+                </property>
+                <property name="listDate">
+                        <list>
+                                <value>DS</value>
+                                <value>DZD</value>
+                                <value>屌丝</value>
+                                <value>吊中吊</value>
+                        </list>
+                </property>
+                <property name="setDate">
+                        <set>
+                                <value>DS</value>
+                                <value>DZD</value>
+                                <value>屌丝</value>
+                                <value>吊中吊</value>
+                        </set>
+                </property>
+                <property name="mapDate">
+                        <map>
+                                <entry key="jack" value="杰克"></entry>
+                                <entry key="rose" value="肉丝"></entry>
+                        </map>
+                </property>
+                <property name="propsDate">
+                        <props>
+                                <prop key="高富帅">长得高，有钱，长得帅</prop>
+                                <prop key="矮穷矬">高富帅的反义词</prop>
+                        </props>
+                </property>
+        </bean>
+</beans>
