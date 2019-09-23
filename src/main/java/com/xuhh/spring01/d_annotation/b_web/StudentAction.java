@@ -13,7 +13,7 @@ import org.springframework.stereotype.Controller;
 public class StudentAction {
 
 	@Autowired
-	private StudentService  studentService;
+	private StudentServiceImpl  studentService;
 
 	public  void execute() {
 		studentService.addStudent();

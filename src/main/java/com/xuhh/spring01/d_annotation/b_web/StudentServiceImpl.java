@@ -13,17 +13,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class StudentServiceImpl implements StudentService{
-
+	@Autowired
 	private StudentDao studentDao;
 	//这个是直接用set方法注入的，前面是用的私有变量注入的
-	@Autowired
-	@Qualifier("studentDaoId")
-	public void setStudentDao(StudentDao studentDao) {
-		this.studentDao = studentDao;
-	}
+//	@Autowired
+//	@Qualifier("studentDaoId")
+//	public void setStudentDao(StudentDao studentDao) {
+//		this.studentDao = studentDao;
+//	}
 
 	@Override
 	public void addStudent() {
-			studentDao.save();
+		studentDao.save();
 	}
 }

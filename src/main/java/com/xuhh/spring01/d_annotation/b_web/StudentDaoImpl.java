@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
  * @Date: Created in 22:10 2018/10/22
  * @Modified By:
  */
-@Repository("studentDaoId")
+@Repository
 public class StudentDaoImpl implements StudentDao{
 	@Override
 	public void save() {
-		System.out.println("dao");
+		System.out.println("dao1");
 	}
 }
